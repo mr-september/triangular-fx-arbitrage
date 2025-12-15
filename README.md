@@ -1,13 +1,13 @@
-# Triangular FX Statistical Arbitrage
+# Triangular FX Structural Arbitrage
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A quantit finance project demonstrating **statistical arbitrage** on FX currency triplets using cointegration analysis and mean-reversion strategies.
+A quantit finance project demonstrating **structural arbitrage** on FX currency triplets using cointegration analysis and mean-reversion strategies.
 
 ## Overview
 
-This project implements a complete statistical arbitrage framework for trading cointegrated FX triplets. Unlike pure triangular arbitrage (which is arbitraged away in milliseconds), this approach exploits the **statistical** tendency of related currency pairs to revert to their long-term equilibrium relationship.
+This project implements a complete structural arbitrage framework for trading cointegrated FX triplets. Unlike pure triangular arbitrage (which is arbitraged away in milliseconds), this approach exploits the **structural** requirement for related currency pairs to maintain their equilibrium relationship.
 
 ### Key Features
 

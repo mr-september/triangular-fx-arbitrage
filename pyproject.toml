@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "fxarb"
 version = "0.1.0"
-description = "Statistical arbitrage on FX triplets using cointegration and mean-reversion"
+description = "Structural arbitrage on FX triplets using cointegration and mean-reversion"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
