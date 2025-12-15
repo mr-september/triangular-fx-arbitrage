@@ -1,0 +1,84 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fxarb"
+version = "0.1.0"
+description = "Statistical arbitrage on FX triplets using cointegration and mean-reversion"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Larry Cai (mr-september)" }
+]
+keywords = [
+    "forex",
+    "trading",
+    "statistical-arbitrage",
+    "cointegration",
+    "mean-reversion",
+    "quantitative-finance"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "statsmodels>=0.14",
+    "arch>=6.0",
+    "hmmlearn>=0.3",
+    "pykalman>=0.9",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "plotly>=5.18",
+    "ipywidgets>=8.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+    "pandas-stubs>=2.0",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "jupyterlab>=4.0",
+    "nbformat>=5.0",
+]
+
+[project.urls]
+Repository = "https://github.com/yourusername/triangular-fx-arbitrage"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fxarb"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

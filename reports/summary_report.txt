@@ -1,0 +1,64 @@
+
+Triangular FX Arbitrage Analysis Report
+Date: 2020-01-01 to 2020-12-31
+Timeframe: 5-minute bars
+
+TRIPLET: EUR/USD, GBP/USD, EUR/GBP
+=========================================
+
+COINTEGRATION ANALYSIS
+----------------------
+Johansen Test:
+  Cointegrating relationships: 1
+  
+Hedge Ratios:
+  EUR/USD: 1.000000
+  GBP/USD: -0.999389
+  EUR/GBP: -1.000094
+
+Stationarity Tests:
+  ADF p-value: 0.000000 (STATIONARY)
+  KPSS p-value: 0.010000 (NON-STATIONARY)
+
+Mean Reversion:
+  Half-life: 2.5 bars (13 minutes) 
+  OU theta: 0.274118
+
+
+STRATEGY: Z-Score Mean Reversion
+--------------------------------
+Parameters:
+  Lookback: 100 bars
+  Entry threshold: ±2.0
+  Exit threshold: 0.0
+  Stop-loss: ±4.0
+
+BACKTEST RESULTS (No transaction costs)
+-----------------------------------------
+Performance:
+  Total Return: nan%
+  CAGR: nan%
+  Sharpe Ratio: 12.05
+  Max Drawdown: -0.31%
+  Calmar Ratio: nan
+
+Trades:
+  Total Trades: 2200
+  Winning Trades: 1260 (57.3%)
+  Average Trade Return: 0.0030%
+  Average Trade Duration: 5.3 bars
+
+
+IMPORTANT DISCLAIMERS
+---------------------
+* Transaction costs NOT included (would reduce returns by ~1-3 pips per trade)
+* Slippage NOT modeled
+* This is a simplified simulation for educational/CV purposes
+* Past performance does not guarantee future results
+
+
+Generated Files:
+  - reports/01_price_overview.png
+  - reports/02_cointegration_analysis.png
+  - reports/03_backtest_results.png
+  - reports/04_session_analysis.png
