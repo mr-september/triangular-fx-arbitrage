@@ -28,16 +28,16 @@ def convert_to_markdown(ipynb_path):
 
 # Save the result
 if __name__ == "__main__":
-    input_file = os.path.join("notebooks", "research_report_v2.ipynb")
-    output_file = "research_report_v2.md"
+    input_file = os.path.join("notebooks", "research_report_v3.ipynb")
+    output_file = "research_report_v3.md"
     
     if not os.path.exists(input_file):
         # Fallback for running from root or scripts dir
         if os.path.exists(os.path.join("..", input_file)):
              input_file = os.path.join("..", input_file)
         # Fallback to local if running in same dir
-        elif os.path.exists("research_report_v2.ipynb"):
-             input_file = "research_report_v2.ipynb"
+        elif os.path.exists("research_report_v3.ipynb"):
+             input_file = "research_report_v3.ipynb"
         else:
              print(f"Error: Could not find {input_file}")
              exit(1)
