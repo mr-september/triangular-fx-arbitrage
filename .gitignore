@@ -69,3 +69,7 @@ Thumbs.db
 # Secrets
 .env
 *.env
+
+# Docling
+notebooks/*_docling.md
+notebooks/*_docling_images/
